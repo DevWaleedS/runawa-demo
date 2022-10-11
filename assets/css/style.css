@@ -424,16 +424,8 @@ footer strong {
 		animation: none;
 		-webkit-animation: none;
 	}
-	.hero-wrapper {
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.7);
-		position: absolute;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		z-index: 10;
-	}
+
+	
 	.swiper-caption {
 		transform: translateY(50%);
 		-webkit-transform: translateY(50%);
