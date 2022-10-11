@@ -62,18 +62,25 @@ ul {
 	border-radius: 5px;
 	color: #fff;
 	font-size: 18px;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
 }
 .contact-btn:hover {
-	/* background-color: initial; */
 	color: #fff;
 }
 .second-btn-bg {
 	background-color: var(--second-color);
+}
+.second-btn-bg:hover {
 	box-shadow: 0px 0px 10px 0px var(--second-color);
 }
-
 .first-btn-bg {
 	background-color: var(--main-color);
+}
+.first-btn-bg:hover {
 	box-shadow: 0px 0px 10px 0px var(--main-color);
 }
 
@@ -99,17 +106,40 @@ ul {
 	color: var(--main-color) !important;
 }
 .whatssapp-btn {
+	position: relative;
+	overflow: hidden;
 	font-weight: 400;
 	padding: 1px 20px;
 	border-radius: 5px;
 	margin-left: -100px;
 	margin-right: 250px;
 	border: 2px solid var(--main-color);
+	cursor: pointer;
 	transition: 0.3s;
 	-webkit-transition: 0.3s;
 	-moz-transition: 0.3s;
 	-ms-transition: 0.3s;
 	-o-transition: 0.3s;
+}
+
+.whatssapp-btn::before {
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 300%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	background: var(--main-color);
+	transition: 0.5s ease;
+	display: block;
+	z-index: -1;
+}
+.whatssapp-btn:hover a {
+	color: #fff !important;
+}
+.whatssapp-btn:hover::before {
+	width: 105%;
 }
 
 .navbar-brand {
@@ -159,6 +189,7 @@ ul {
 	position: absolute;
 	right: 0;
 	top: 0;
+	bottom: 0;
 	z-index: 10;
 }
 .swiper-caption {
@@ -400,6 +431,7 @@ footer strong {
 		position: absolute;
 		right: 0;
 		top: 0;
+		bottom: 0;
 		z-index: 10;
 	}
 	.swiper-caption {
